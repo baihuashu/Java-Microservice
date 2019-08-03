@@ -1,0 +1,36 @@
+server:
+  port: 8888
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/study_service?useSSL=false
+    username: root
+    password: 123456
+  application:
+    name: choerodon-study-service-25648-wzl
+  liquibase:
+    check-change-log-location: false
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+
+eureka:
+  instance:
+    preferIpAddress: true
+    leaseRenewalIntervalInSeconds: 10
+    leaseExpirationDurationInSeconds: 30
+    metadata-map:
+      VERSION: v1
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://register-server.pveruntimedev.svc.cluster.local:8000/eureka/
+
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+logging:
+  level:
+    io.choerodon.study.api.controller.v1.*: debug

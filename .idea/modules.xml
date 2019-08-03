@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../JavaTest5/api-gateway-0.18.1/api-gateway.iml" filepath="$PROJECT_DIR$/../JavaTest5/api-gateway-0.18.1/api-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/choerodon-study-service.iml" filepath="$PROJECT_DIR$/choerodon-study-service.iml" />
+      <module fileurl="file://$USER_HOME$/Desktop/mywork/JavaTest6/choerodon-todo-service (2).iml" filepath="$USER_HOME$/Desktop/mywork/JavaTest6/choerodon-todo-service (2).iml" />
+    </modules>
+  </component>
+</project>

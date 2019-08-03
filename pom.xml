@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <groupId>io.choerodon</groupId>
+    <artifactId>choerodon-study-service</artifactId>
+    <version>1.0.0</version>
+    <!--choerodon-framework-parent dependency-->
+    <parent>
+        <groupId>io.choerodon</groupId>
+        <artifactId>choerodon-framework-parent</artifactId>
+        <version>0.11.0.RELEASE</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <!--choerodon-starters dependency-->
+    <properties>
+        <choerodon.starters.version>0.11.0.RELEASE</choerodon.starters.version>
+        <choerodon.serviceBuild>true</choerodon.serviceBuild>
+        <choerodon.mainClass>io.choerodon.javatest5.Javatest5Application</choerodon.mainClass>
+    </properties>
+    <dependencies>
+        <!--spring boot-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-undertow</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-tomcat</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
+        <!--         允许注册到注册中心时，添加此依赖 -->
+        <!--spring cloud-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+
+        <!--choerodon-->
+        <dependency>
+            <groupId>io.choerodon</groupId>
+            <artifactId>choerodon-starter-core</artifactId>
+            <version>${choerodon.starters.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.choerodon</groupId>
+            <artifactId>choerodon-starter-oauth-resource</artifactId>
+            <version>${choerodon.starters.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.choerodon</groupId>
+            <artifactId>choerodon-starter-swagger</artifactId>
+            <version>${choerodon.starters.version}</version>
+        </dependency>
+        <!--         配置文件中添加数据库配置后，添加以下依赖-->
+        <dependency>
+            <groupId>io.choerodon</groupId>
+            <artifactId>choerodon-starter-mybatis</artifactId>
+            <version>${choerodon.starters.version}</version>
+        </dependency>
+
+        <!--other dependencies-->
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+
+        <!-- 添加cpu监控 -->
+        <dependency>
+            <groupId>io.choerodon</groupId>
+            <artifactId>choerodon-starter-metric</artifactId>
+            <version>${choerodon.starters.version}</version>
+        </dependency>
+
+        <!-- 事件控制 -->
+        <dependency>
+            <groupId>io.choerodon</groupId>
+            <artifactId>choerodon-starter-asgard</artifactId>
+            <version>${choerodon.starters.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.choerodon</groupId>
+            <artifactId>choerodon-starter-actuator</artifactId>
+            <version>${choerodon.starters.version}</version>
+        </dependency>
+
+        <!-- Test Dependencies -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>io.choerodon</groupId>
+            <artifactId>choerodon-liquibase</artifactId>
+            <version>${choerodon.starters.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>1.4.197</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.spockframework</groupId>
+            <artifactId>spock-core</artifactId>
+            <version>1.1-groovy-2.4-rc-2</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.spockframework</groupId>
+            <artifactId>spock-spring</artifactId>
+            <version>1.1-groovy-2.4-rc-3</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.squareup.okhttp3</groupId>
+            <artifactId>okhttp</artifactId>
+            <version>3.14.1</version>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <finalName>exam1</finalName>
+    </build>
+
+</project>
