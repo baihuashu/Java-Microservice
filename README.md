@@ -1,5 +1,6 @@
 # 1. 初始化本地数据库用户和数据库
 ```
+
 CREATE USER 'choerodon'@'%' IDENTIFIED BY "123456";
 CREATE DATABASE IF NOT EXISTS study_service DEFAULT CHARACTER SET utf8mb4;
 GRANT ALL PRIVILEGES ON study_service.* TO choerodon@'%';
